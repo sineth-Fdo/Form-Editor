@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../styles/globals.css";
+import { poppins } from "@/styles/fonts";
 
 export const metadata: Metadata = {
   title: "Form Editor",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body  className={`${poppins.className} scroll-smooth`}>
+        {children}
+      </body>
     </html>
   );
 }
