@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaDotCircle } from "react-icons/fa";
 import { RiSettings4Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
-import Cookies from 'js-cookie';
+import { useText } from "@/app/(form)/contexts/StateContext";
 
 interface IStepProps {
   name?: string;
@@ -13,6 +13,7 @@ interface IStepProps {
 
 const StepComponent = (props : IStepProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const {clickedStep, setClickedStep} = useText();
 
   const {
     name = "Welcome Screen",
@@ -29,7 +30,7 @@ const StepComponent = (props : IStepProps) => {
       <button
         onClick={() => {
           togglePopup();
-          Cookies.set('stepName', name.replace(/\s+/g, ''));
+          setClickedStep(name);
 
         }}
         className="relative w-[100%] h-11 flex justify-center items-center bg-[#f4f4f5] rounded-md mb-3 hover:bg-[#e9e9e9] cursor-pointer"

@@ -1,13 +1,17 @@
 'use client';
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const TextContext = createContext();
 
 export const TextProvider = ({ children }) => {
   const [text, setText] = useState("example text");
+  const [clickedStep, setClickedStep] = useState("Welcome Screen");
 
   return (
-    <TextContext.Provider value={{ text, setText }}>
+    <TextContext.Provider value={{ 
+        text, setText, 
+        clickedStep, setClickedStep,
+        }}>
       {children}
     </TextContext.Provider>
   );
