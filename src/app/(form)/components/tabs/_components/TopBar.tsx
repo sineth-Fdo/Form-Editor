@@ -6,12 +6,12 @@ const TopBar = () => {
   return (
     <div className=' w-[100%] h-14 flex'>
     <div className=' w-[90%] flex justify-start items-center'>
-        <div className=' flex justify-center items-center'>
-                <span className='text-[12px] mr-1 '><RiBox3Fill /></span>
-                <h3 className='text-[12px] text-[#00000081] '>Dashboard</h3>
+        <div className=' flex justify-center items-center group cursor-pointer'>
+                <span className='text-[12px] mr-1 group-hover:text-blue-500 transition-colors duration-200'><RiBox3Fill /></span>
+                <h3 className='text-[12px] text-[#00000081] group-hover:text-blue-500 transition-colors duration-200 '>Dashboard</h3>
         </div>
         <div className=' w-[90px] flex justify-start items-start ml-2'>
-                <h3 className='text-[12px] text-[#00000081]'> &gt; Dashboard</h3>
+                <h3 className='text-[12px] text-[#00000081]'> &gt; My Form</h3>
         </div>
         
     </div>
