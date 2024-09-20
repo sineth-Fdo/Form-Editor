@@ -1,5 +1,4 @@
 'use client';
-import React, { useState } from 'react'
 import LeftPreview from './components/LeftPreview'
 import RightPreview from './components/RightPreview'
 
