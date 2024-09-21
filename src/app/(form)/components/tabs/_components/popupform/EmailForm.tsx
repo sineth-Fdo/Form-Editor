@@ -4,7 +4,7 @@ import ContentBottom from "../ContentBottom";
 import TextInput from "./_components/TextInput";
 
 const EmailForm = ({onPress}:any) => {
-  const {  emailTitle, setEmailTitle,emailDescription, setEmailDescription,emailRequired, setEmailRequired ,emailValue, setEmailValue } = useText();
+  const {  emailTitle, setEmailTitle,emailDescription, setEmailDescription,emailRequired, setEmailRequired } = useText();
 
   return (
     <div>

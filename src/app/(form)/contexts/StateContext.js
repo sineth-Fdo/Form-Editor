@@ -5,8 +5,8 @@ const TextContext = createContext();
 
 export const TextProvider = ({ children }) => {
   const [clickedStep, setClickedStep] = useState("Welcome Screen");
-  const [emailTitle, setEmailTitle] = useState("");
-  const [emailDescription, setEmailDescription] = useState("");
+  const [emailTitle, setEmailTitle] = useState("Enter your email");
+  const [emailDescription, setEmailDescription] = useState("This is a description of the email");
   const [emailRequired, setEmailRequired] = useState(false);
   const [emailValue, setEmailValue] = useState("");
   const [stepsArr , setStepsArr] = useState([]);
@@ -14,7 +14,7 @@ export const TextProvider = ({ children }) => {
   const [description, setDescription] = useState("This is a description of the form");
   const [buttonText, setButtonText] = useState("Start");
   const [imagePreview, setImagePreview] = useState("");
-  const [placement, setPlacement] = useState("right");
+  const [placement, setPlacement] = useState("left");
 
 
 
