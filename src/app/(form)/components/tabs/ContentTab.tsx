@@ -76,8 +76,8 @@ const ContentTab = () => {
                   />
                   <PopupField
                     icon={FaPhone}
-                    fieldName="Phone"
-                    onClick={() => addField("Phone")}
+                    fieldName="Contacts"
+                    onClick={() => addField("Contacts")}
                   />
                 </div>
               </DialogDescription>
