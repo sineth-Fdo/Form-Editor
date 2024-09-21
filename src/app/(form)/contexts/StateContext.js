@@ -9,11 +9,12 @@ export const TextProvider = ({ children }) => {
   const [emailDescription, setEmailDescription] = useState("");
   const [emailRequired, setEmailRequired] = useState(false);
   const [emailValue, setEmailValue] = useState("");
-  const [stepsArr , setStepsArr] = useState([
-    "Email",
-    "Phone",
-    "Address",
-  ]);
+  const [stepsArr , setStepsArr] = useState([]);
+  const [title, setTitle] = useState("Welcome to our form");
+  const [description, setDescription] = useState("This is a description of the form");
+  const [buttonText, setButtonText] = useState("Start");
+  const [imagePreview, setImagePreview] = useState("");
+  const [placement, setPlacement] = useState("right");
 
 
 
@@ -24,7 +25,12 @@ export const TextProvider = ({ children }) => {
         emailDescription, setEmailDescription,
         stepsArr, setStepsArr,
         emailRequired, setEmailRequired,
-        emailValue, setEmailValue
+        emailValue, setEmailValue,
+        title, setTitle,
+        description, setDescription,
+        buttonText, setButtonText,
+        imagePreview, setImagePreview,
+        placement, setPlacement
         }}>
       {children}
     </TextContext.Provider>
