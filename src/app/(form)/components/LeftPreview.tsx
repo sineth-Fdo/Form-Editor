@@ -3,7 +3,6 @@ import TopBar from "./tabs/_components/TopBar";
 import ContentTab from "./tabs/ContentTab";
 
 const LeftPreview = () => {
-
   return (
     <div className=" min-w-[320px] h-[100vh] bg-[#ffffff] pt-2 px-3">
       <TopBar />
@@ -31,7 +30,6 @@ const LeftPreview = () => {
           <TabsContent value="share"></TabsContent>
           <TabsContent value="replies"></TabsContent>
         </Tabs>
-
       </div>
     </div>
   );
