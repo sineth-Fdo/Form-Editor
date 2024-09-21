@@ -3,9 +3,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useState } from "react";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { LuUpload } from "react-icons/lu";
+import ContentBottom from "../ContentBottom";
 import TextInput from "./_components/TextInput";
 
-const BigForm = () => {
+const BigForm = ({ onPress }: any) => {
   const {
     title,
     setTitle,
@@ -97,8 +98,8 @@ const BigForm = () => {
                 }  w-12 h-10 flex justify-center items-center rounded-md cursor-pointer focus:bg-[blue]`}
                 onClick={() => setPlacement("right")}
               >
-                <HiOutlineMenuAlt2 />
                 <div className="bg-[#000] w-[40%] h-[60%] rounded-sm"></div>
+                <HiOutlineMenuAlt2 />
               </div>
               <div
                 className={`border ${
@@ -106,11 +107,20 @@ const BigForm = () => {
                 } w-12 h-10 flex justify-center items-center rounded-md cursor-pointer`}
                 onClick={() => setPlacement("left")}
               >
-                <div className="bg-[#000] w-[40%] h-[60%] rounded-sm"></div>
                 <HiOutlineMenuAlt2 />
+                <div className="bg-[#000] w-[40%] h-[60%] rounded-sm"></div>
               </div>
             </div>
           )}
+          <div className=" w-[100%] h-20 flex justify-between items-center mt-3">
+            <ContentBottom
+              name="Save"
+              onClick={() => {
+                onPress();
+              }}
+            />
+            <ContentBottom name="Discard" />
+          </div>
         </div>
       </ScrollArea>
     </div>

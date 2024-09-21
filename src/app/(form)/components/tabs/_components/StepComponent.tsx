@@ -73,10 +73,10 @@ const StepComponent = (props: IStepProps) => {
           clickedStep === "Email" ? (
             <EmailForm onPress = {togglePopup}/>
           ) : clickedStep === "Phone" ? (
-            <EmailForm />
+            <EmailForm onPress = {togglePopup}/>
           ) : null
         ) : (
-          <BigForm />
+          <BigForm onPress = {togglePopup}/>
         )}
       </div>
     </div>
