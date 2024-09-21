@@ -6,6 +6,7 @@ import { RiSettings4Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import BigForm from "./popupform/BigForm";
 import EmailForm from "./popupform/EmailForm";
+import ContactForm from "./popupform/ContactForm";
 
 interface IStepProps {
   name?: string;
@@ -72,8 +73,8 @@ const StepComponent = (props: IStepProps) => {
         {clickedStep !== "Welcome Screen" && clickedStep !== "End Screen" ? (
           clickedStep === "Email" ? (
             <EmailForm onPress = {togglePopup}/>
-          ) : clickedStep === "Phone" ? (
-            <EmailForm onPress = {togglePopup}/>
+          ) : clickedStep === "Contacts" ? (
+            <ContactForm onPress = {togglePopup}/>
           ) : null
         ) : (
           <BigForm onPress = {togglePopup}/>

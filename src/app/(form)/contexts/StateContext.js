@@ -15,6 +15,10 @@ export const TextProvider = ({ children }) => {
   const [buttonText, setButtonText] = useState("Start");
   const [imagePreview, setImagePreview] = useState("");
   const [placement, setPlacement] = useState("left");
+  const [contactTitle, setContactTitle] = useState("Contact Us");
+  const [contactDescription, setContactDescription] = useState("This is a description of the contact form");
+  const [contactFields, setContactFields] = useState([]);
+  
 
 
 
@@ -30,7 +34,10 @@ export const TextProvider = ({ children }) => {
         description, setDescription,
         buttonText, setButtonText,
         imagePreview, setImagePreview,
-        placement, setPlacement
+        placement, setPlacement,
+        contactTitle, setContactTitle,
+        contactDescription, setContactDescription,
+        contactFields, setContactFields
         }}>
       {children}
     </TextContext.Provider>
