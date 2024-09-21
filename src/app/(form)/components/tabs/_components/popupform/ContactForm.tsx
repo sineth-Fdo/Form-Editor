@@ -72,18 +72,6 @@ const ContactForm = ({ onPress }: any) => {
           <h1 className="text-white text-xl">+</h1>
         </div>
       </div>
-      {/*display*/}
-      <div className="my-6">
-        {contactFields.length > 0 && (
-          <div className="mt-4">
-            {contactFields.map((field: any, index: any) => (
-              <p key={index}>
-                <strong>Field {index + 1}:</strong> {field.value}
-              </p>
-            ))}
-          </div>
-        )}
-      </div>
 
       <div className="w-[100%] h-20 flex justify-between items-center">
         <ContentBottom
